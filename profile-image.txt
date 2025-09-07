@@ -1,0 +1,2 @@
+/* This file will store the base64 encoded image data */
+/* The image will be referenced in the CSS */
