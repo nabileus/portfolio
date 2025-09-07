@@ -220,15 +220,15 @@ function createScrollToTopButton() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(45deg, #2563eb, #f59e0b);
-        color: white;
+        background: linear-gradient(45deg, #10b981, #06d6a0);
+        color: #0f172a;
         border: none;
         cursor: pointer;
         font-size: 18px;
         display: none;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4);
         transition: all 0.3s ease;
         z-index: 1000;
     `;
@@ -237,12 +237,12 @@ function createScrollToTopButton() {
     
     scrollBtn.addEventListener('mouseenter', () => {
         scrollBtn.style.transform = 'translateY(-3px) scale(1.1)';
-        scrollBtn.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+        scrollBtn.style.boxShadow = '0 0 25px rgba(16, 185, 129, 0.5), 0 6px 20px rgba(0, 0, 0, 0.4)';
     });
     
     scrollBtn.addEventListener('mouseleave', () => {
         scrollBtn.style.transform = 'translateY(0) scale(1)';
-        scrollBtn.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        scrollBtn.style.boxShadow = '0 0 20px rgba(16, 185, 129, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4)';
     });
     
     document.body.appendChild(scrollBtn);
@@ -339,11 +339,11 @@ function animateHeroBackground() {
     let angle = 135;
     
     setInterval(() => {
-        angle += 0.5;
+        angle += 0.3;
         if (angle >= 360) angle = 0;
         
-        hero.style.background = `linear-gradient(${angle}deg, #667eea 0%, #764ba2 100%)`;
-    }, 100);
+        hero.style.background = `linear-gradient(${angle}deg, #0f172a 0%, #1e293b 50%, #334155 100%)`;
+    }, 150);
 }
 
 // Initialize hero background animation
